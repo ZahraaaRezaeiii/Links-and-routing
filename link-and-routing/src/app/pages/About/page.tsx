@@ -7,9 +7,10 @@ const About = () => {
             sx={{
             padding: 2,
             textAlign: "center",
-            }}>
+            }}
+            suppressHydrationWarning>
             <Typography variant="h4" component="h1" gutterBottom>About page</Typography>
-            <Link href="./Home">Go to Home page</Link>
+            <Link href="/pages/Home">Go to Home page</Link>
         </Box>
     )
 }
