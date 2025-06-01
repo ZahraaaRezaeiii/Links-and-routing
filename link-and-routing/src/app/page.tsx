@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Navbar from "./pages/Navbar";
+import Navbar from "./pages/page";
 
 export default function Home() {
   return (
