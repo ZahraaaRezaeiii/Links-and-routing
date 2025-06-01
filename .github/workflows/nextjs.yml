@@ -31,7 +31,8 @@ jobs:
           git config --global user.email "actions@github.com"
           git add package-lock.json
           git commit -m "Rebuild lockfile [skip ci]" || echo "No changes to commit"
-          
+        working-directory: ./link-and-routing
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -54,9 +55,11 @@ jobs:
       # 🔴 از npm install به جای npm ci استفاده کنید
       - name: Install dependencies
         run: npm install
+        working-directory: ./link-and-routing
           
       - name: Build with Next.js
         run: npx next build
+        working-directory: ./link-and-routing
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
